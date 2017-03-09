@@ -1,16 +1,17 @@
 {
-    "manifest_version": 2,
-    "name": "Link Cleaner",
-    "version": "1.0",
-
-    "description": "Clean URLs that are about to be visited from utm_* parameters.\n\nAlso cleans tracking parameters on item pages of aliexpress and amazon sites.",
-
-    "permissions": [
-        "webRequest",
-        "webRequestBlocking"
-    ],
-
-    "background": {
-        "scripts": ["background.js"]
-    }
+  "author": "Erwan Ameil",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "description": "Clean URLs that are about to be visited from utm_* parameters.\nAlso cleans tracking parameters on item pages of aliexpress and amazon sites.\nFor example, this url:\n  http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/?utm_source=frontendfocus&utm_medium=email\n\nis changed to:\n  http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/\n\nThis amazon url:\n  https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYQ02/ref=sr_1_1?s=amazonbasics&srs=10112675011&ie=UTF8&qid=1489067885&sr=8-1&keywords=usb-c\n\nis changed to:\n  https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYQ02/\n\nYou can now visit and bookmark clean links instead of the long, tracking-enabled ones!\n",
+  "homepage_url": "https://github.com/idlewan/link_cleaner",
+  "manifest_version": 2,
+  "name": "Link Cleaner",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "version": "1.1"
 }
