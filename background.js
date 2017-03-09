@@ -20,7 +20,7 @@ function clean_utm(requestDetails) {
                 requestDetails.url, "  and redirection to: ",
                 new_url.href);*/
             return {
-                redirectUrl: new_url
+                redirectUrl: new_url.href
             }
         }
     }
@@ -89,7 +89,7 @@ function clean_aliexpress(requestDetails) {
     if (url.search.length > 0) {
         url.search = "";
         //console.info("Clean aliexpress url to:", url.href);
-        return {redirectUrl: url};
+        return {redirectUrl: url.href};
     }
 }
 browser.webRequest.onBeforeRequest.addListener(
