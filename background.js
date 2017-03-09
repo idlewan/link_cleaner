@@ -93,6 +93,19 @@ browser.webRequest.onBeforeRequest.addListener(
         "*://*.amazon.com.mx/*/dp/*",
         "*://*.amazon.com.au/*/dp/*",
         "*://*.amazon.com.br/*/dp/*",
+
+        "*://*.amazon.com/gp/product/*",
+        "*://*.amazon.ca/gp/product/*",
+        "*://*.amazon.co.jp/gp/product/*",
+        "*://*.amazon.co.uk/gp/product/*",
+        "*://*.amazon.cn/gp/product/*",
+        "*://*.amazon.de/gp/product/*",
+        "*://*.amazon.fr/gp/product/*",
+        "*://*.amazon.in/gp/product/*",
+        "*://*.amazon.it/gp/product/*",
+        "*://*.amazon.com.mx/gp/product/*",
+        "*://*.amazon.com.au/gp/product/*",
+        "*://*.amazon.com.br/gp/product/*",
     ], types: ["main_frame"]},
     ["blocking"]
 );
@@ -108,22 +121,8 @@ function remove_searchparams(requestDetails) {
 }
 browser.webRequest.onBeforeRequest.addListener(
     remove_searchparams,
-    {urls: [
-        "*://*.aliexpress.com/item/*.html*",
-
-        "*://*.amazon.com/gp/product/*",
-        "*://*.amazon.ca/gp/product/*",
-        "*://*.amazon.co.jp/gp/product/*",
-        "*://*.amazon.co.uk/gp/product/*",
-        "*://*.amazon.cn/gp/product/*",
-        "*://*.amazon.de/gp/product/*",
-        "*://*.amazon.fr/gp/product/*",
-        "*://*.amazon.in/gp/product/*",
-        "*://*.amazon.it/gp/product/*",
-        "*://*.amazon.com.mx/gp/product/*",
-        "*://*.amazon.com.au/gp/product/*",
-        "*://*.amazon.com.br/gp/product/*",
-        ],
+    {
+        urls: ["*://*.aliexpress.com/item/*.html*"],
         types: ["main_frame"]
     }, ["blocking"]
 );
