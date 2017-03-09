@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Link Cleaner",
+    "version": "1.0",
+
+    "description": "Clean URLs that are about to be visited from utm_* parameters.\n\nAlso cleans tracking parameters on item pages of aliexpress and amazon sites.",
+
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking"
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
