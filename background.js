@@ -139,3 +139,22 @@ browser.webRequest.onBeforeRequest.addListener(
         types: ["main_frame"]
     }, ["blocking"]
 );
+
+function remove_facebookredirectparams(requestDetails) {
+  var myRegexp = /https:\/\/l.facebook.com\/l.php[?]u=(.*)&h=.*/g;
+  var match = myRegexp.exec(requestDetails.url);
+
+  var matched_group = match[1];
+  if (matched_group){
+    var new_url = unescape(matched_group);
+    //console.info("Clean url to:", new_url);
+    return {redirectUrl: new_url};
+  }
+}
+browser.webRequest.onBeforeRequest.addListener(
+    remove_facebookredirectparams,
+    {
+        urls: ["*://l.facebook.com/*"],
+        types: ["main_frame"]
+    }, ["blocking"]
+);
