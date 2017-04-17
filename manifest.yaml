@@ -29,5 +29,6 @@ background:
   - background.js
 
 permissions:
+- '<all_urls>'
 - webRequest
 - webRequestBlocking
