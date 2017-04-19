@@ -2,11 +2,11 @@ manifest_version: 2
 name: Link Cleaner
 author: Erwan Ameil
 homepage_url: https://github.com/idlewan/link_cleaner
-version: '1.2'
+version: '1.3'
 
 description: >
   Clean URLs that are about to be visited from utm_* parameters.
-  
+
   Also cleans tracking parameters on item pages of aliexpress and amazon sites.
 
   For example, this url:
