@@ -15,6 +15,23 @@ This amazon url:
 is changed to:
     https://www.amazon.com/AmazonBasics-Type-C-USB-Male-Cable/dp/B01GGKYQ02/
 
+This facebook url:
+    https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.fsf.org%2Fcampaigns%2F&h=ATP1kf98S0FxqErjoW8VmdSllIp4veuH2_m1jl69sEEeLzUXbkNXrVnzRMp65r5vf21LJGTgJwR2b66m97zYJoXx951n-pr4ruS1osMvT2c9ITsplpPU37RlSqJsSgba&s=1
+
+is changed to https://www.fsf.org/campaigns/
+
+This reddit url:
+    https://out.reddit.com/t3_5pq7qd?url=https%3A%2F%2Finternethealthreport.org%2Fv01%2F&token=AQAAZV6JWHBBnIcVjV1wvxVg5gKyCQQSdUhGIvuEUmdPZhxhm8kH&app_name=reddit.com
+
+is changed to:
+    https://internethealthreport.org/v01/
+
+This steam url:
+     https://steamcommunity.com/linkfilter/?url=https://getfedora.org/
+
+is changed to:
+    https://getfedora.org/
+
 You can now visit and bookmark clean links instead of the long,
 tracking-enabled ones!
 

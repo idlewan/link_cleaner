@@ -140,21 +140,38 @@ browser.webRequest.onBeforeRequest.addListener(
     }, ["blocking"]
 );
 
-function remove_facebookredirectparams(requestDetails) {
-  var myRegexp = /https:\/\/l.facebook.com\/l.php[?]u=(.*)&h=.*/g;
-  var match = myRegexp.exec(requestDetails.url);
-
-  var matched_group = match[1];
-  if (matched_group){
-    var new_url = unescape(matched_group);
-    //console.info("Clean url to:", new_url);
-    return {redirectUrl: new_url};
+function build_redirect_to_query_param(query_param_name){
+  const redirect_to_get_param = function(requestDetails){
+    const search_params = new URLSearchParams(new URL(requestDetails.url).search);
+    const real_url_from_param = search_params.get(query_param_name);
+    if (real_url_from_param){
+      // console.log('Redirecting to ' + real_url_from_param);
+      return {redirectUrl: real_url_from_param};
+    }
   }
+  return redirect_to_get_param;
 }
-browser.webRequest.onBeforeRequest.addListener(
-    remove_facebookredirectparams,
-    {
-        urls: ["*://l.facebook.com/*"],
-        types: ["main_frame"]
+
+const urls_to_param_mappers = [
+  {
+    urls: ["*://l.facebook.com/*"],
+    param_name: 'u'
+  },
+  {
+    urls: ["*://out.reddit.com/*"]
+  },
+  {
+    urls: ["*://steamcommunity.com/linkfilter/*"]
+  }
+];
+
+urls_to_param_mappers.forEach(function(listenerConfig) {
+  const param_name = listenerConfig.param_name ? listenerConfig.param_name : 'url';
+  // console.log('Mapping ' + listenerConfig.urls + ' to param name ' + param_name);
+  browser.webRequest.onBeforeRequest.addListener(
+    build_redirect_to_query_param(param_name), {
+      urls: listenerConfig.urls,
+      types: ["main_frame"]
     }, ["blocking"]
-);
+  );
+});
