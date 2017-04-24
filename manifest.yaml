@@ -5,7 +5,7 @@ homepage_url: https://github.com/idlewan/link_cleaner
 version: '1.4'
 
 description: >
-  Browser extension to clean URLs that are about to be visited:
+  Clean URLs that are about to be visited:
   - removes utm_* parameters
   - on item pages of aliexpress and amazon, removes tracking parameters
   - skip redirect pages of facebook, steam and reddit (directly go to the url

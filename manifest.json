@@ -5,7 +5,7 @@
       "background.js"
     ]
   },
-  "description": "Browser extension to clean URLs that are about to be visited: - removes utm_* parameters - on item pages of aliexpress and amazon, removes tracking parameters - skip redirect pages of facebook, steam and reddit (directly go to the url being redirected to, and never hit their outgoing redirect tracking)\nYou can now visit and bookmark clean links instead of the long, tracking-enabled ones!\n",
+  "description": "Clean URLs that are about to be visited: - removes utm_* parameters - on item pages of aliexpress and amazon, removes tracking parameters - skip redirect pages of facebook, steam and reddit (directly go to the url being redirected to, and never hit their outgoing redirect tracking)\nYou can now visit and bookmark clean links instead of the long, tracking-enabled ones!\n",
   "homepage_url": "https://github.com/idlewan/link_cleaner",
   "manifest_version": 2,
   "name": "Link Cleaner",
