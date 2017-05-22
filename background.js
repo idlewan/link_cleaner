@@ -135,8 +135,10 @@ function remove_searchparams(requestDetails) {
 browser.webRequest.onBeforeRequest.addListener(
     remove_searchparams,
     {
-        urls: ["*://*.aliexpress.com/item/*.html*"],
-        types: ["main_frame"]
+        urls: [
+            "*://*.aliexpress.com/item/*.html*",
+            "*://*.aliexpress.com/store/product/*.html*",
+        ], types: ["main_frame"]
     }, ["blocking"]
 );
 
