@@ -48,6 +48,13 @@ function clean_amazon(requestDetails) {
             //console.info("Redirecting from: ", url, " to:", new_url);
             return {redirectUrl: new_url};
         }
+    } else {
+        url = new URL(url);
+        if (url.search.length > 0) {
+            url.search = "";
+            //console.info("Clean url to:", url.href);
+            return {redirectUrl: url.href};
+        }
     }
 }
 
