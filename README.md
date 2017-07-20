@@ -1,4 +1,7 @@
 # Link Cleaner
+Find and install this extension on the [Mozilla Add-ons website](
+https://addons.mozilla.org/en-US/firefox/addon/link-cleaner/).
+
 Browser extension to clean URLs that are about to be visited:
 - removes utm_* parameters
 - on item pages of aliexpress and amazon, removes tracking parameters
@@ -30,11 +33,14 @@ tracking-enabled ones!
   is changed to:  
     https://getfedora.org/
 
-# Comparison to other addons
-Unlike a plugin like the (outdated) CleanLinks, Link Cleaner doesn't inject
+# Comparison to other add-ons
+Unlike other legacy add-ons like CleanLinks, Link Cleaner doesn't inject
 JavaScript into pages to change links.
-Instead, it listens to main url requests and changes them to remove redirects
-or tracking.
+Instead, it listens to main url requests and changes them (if needed to remove
+redirects or tracking.
+
+That means it's doing less unneeded work and consumes less resources
+(memory and CPU).
 
 # License
 Released under the GPLv3 license
