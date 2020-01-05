@@ -1,4 +1,9 @@
 # Link Cleaner
+
+---
+This repository is currently unmaintained at the moment. There's an active fork (Link Cleaner+) that's accepting pull requests here https://github.com/apiraino/link_cleaner/ if you have PRs or feedback on issues.
+---
+
 Find and install this extension on the [Mozilla Add-ons website](
 https://addons.mozilla.org/en-US/firefox/addon/link-cleaner/).
 
